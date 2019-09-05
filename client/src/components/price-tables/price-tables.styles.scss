@@ -1,0 +1,137 @@
+.cs-price-card {
+    border-radius: 25px;
+    background-color: #ffffff;
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 370px;
+    position: relative;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    overflow: hidden;
+    }
+
+
+    .title{
+    color: #243949;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10%;
+    }
+    
+    p{
+    color: #243949;
+    }
+
+    .cs-price-card:hover {
+    -webkit-box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.7);
+    }
+  
+  .cs-price-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      color-stop(1%, #04befe),
+      to(#4481eb)
+    );
+    background: linear-gradient(-90deg, #04befe 1%, #4481eb 100%);
+    border-radius: 5px 5px 0 0;
+    height: 7px;
+  }
+  
+  .cs-price-card-info {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f1f1f1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    padding: 20%;
+  }
+  
+  .cs-price-card .btn-light {
+    background-color: #edecec;
+    color: #516378;
+    border-color: #edecec;
+  }
+  
+  .cs-price-card-info h5 {
+    color: #04befe;;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .cs-price-card-info h1 {
+    color: #516378;
+    margin: 0;
+    font-size: 2.375rem;
+    font-weight: 600;
+  }
+  
+  .cs-price-card-info h1 sup {
+    color: inherit;
+    top: -1.2em;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .cs-price-card-info h1 small {
+    color: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .cs-price-card-content {
+    padding: 40px 30px;
+  }
+  
+  .cs-price-card-features {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 30px;
+  }
+  
+  .cs-price-card-features li {
+    color: #666666;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 2.571;
+  }
+  
+  .cs-price-card-features li.in-active {
+    color: #d5d5d5;
+  }
+
+  .custom-button {
+      margin: auto;
+}
+  
+  @media (max-width: 900px) {
+    .cs-price-card-info {
+      padding: 20px;
+    }
+
+    .cs-price-card-info h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .cs-price-card-content {
+      padding: 20px 15px;
+    }
+
+    .cs-price-card-features {
+      margin-bottom: 15px;
+    }
+    .cs-price-card-features li {
+      line-height: 2;
+    }
+}

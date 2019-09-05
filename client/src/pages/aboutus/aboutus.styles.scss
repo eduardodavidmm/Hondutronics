@@ -1,0 +1,98 @@
+.about{
+
+    color: #000;
+
+    .title{
+        text-align: center;
+        margin-top: -100px;
+        margin-bottom: 40px;
+    }
+
+    p   {
+        text-align: justify;
+        margin: 20px;
+        color: #000;
+        font-size: 16px;
+    }
+
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .embed-container iframe {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        border-radius: 25px;
+    }
+
+    .partnersabout{
+        margin-top: 100px;
+      }
+    
+    .prob{
+        align-content: center;
+
+        .card{
+        cursor: pointer;
+        border: none;
+        background-color: #f7f7f7;
+        border-radius: 25px;
+        text-align: justify;
+        padding: 0px;
+        margin: auto;
+        position: relative;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        overflow: hidden;
+        height: 300px;
+        display: flex;
+
+        .h4{
+            padding-top: 10px;
+            color: #04befe;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        p{
+            font-size: 13px;
+        }
+
+        &:hover{
+            -webkit-box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.3);
+        }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .about {
+        .embed-container iframe {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        
+        .prob{
+
+        .card{
+            height: auto;
+            margin-bottom: 20px;
+
+            p{
+                font-size: 12px;
+            }
+        }
+        }
+    }
+  }
+  

@@ -1,0 +1,50 @@
+.testimonials{
+
+    .h1-responsive{
+        color: #243949;
+    }
+
+    .testimonial{
+        padding: 3%;
+    }
+    
+    .card{
+        border-radius: 25px;
+    }
+
+    h4{
+        color: #04befe;
+    }
+
+    .img-fluid{
+        width: 20%;
+    }
+
+    .custom-button{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .testimonials{
+        .testimonial{
+            padding: 2%;
+            width: 100%;
+        }
+    
+        h4{
+            color: #04befe;
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+    
+        .img-fluid{
+            margin-top: 10px;
+            width: 40%;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.container{
+    .call-action-media {
+    border-radius: 25px;
+    border: 3px solid rgba(91, 131, 254, 0.3);
+    background-color: #F7F7F7;
+    padding: 30px;
+    }
+  
+    .call-action-media-text {
+    color: #666666;
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+    }
+    
+    .call-action-media .media-body {
+        margin-left: 5%;
+    }
+    
+    a:hover{
+        text-decoration-line: none;
+    }
+}
+
+  @media (max-width: 900px) {
+    .container{
+    .call-action-media .media {
+      display: block;
+      text-align: center;
+    }
+    .call-action-media .media-body {
+      margin-left: 0%;
+      margin-top: 1.5rem;
+    }
+
+    .h3media{
+        font-size: 16px;
+    }
+
+    .button{
+      padding: 0px;
+      padding-left: 0px;
+    }
+
+  }  
+}
+

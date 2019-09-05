@@ -1,0 +1,73 @@
+header {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  
+    header.fixed-top-added {
+    padding-top: 50px;
+    }
+  
+    .hero-content {
+    margin-top: 80px;
+    }
+
+    .title{
+    opacity: 0;
+    animation: fadeSimple 0.5s ease-in-out 0.5s forwards;
+    }
+    
+    .parragraph{
+    opacity: 0;
+    animation: fadeSimple 1.5s ease-in-out 1.5s forwards;
+    }
+    
+    .pair-btns-list{
+    display: flex;
+    opacity: 0;
+    animation: fadeSimple 2.5s ease-in-out 2.5s forwards;
+    }
+    
+    .image{
+    opacity: 0;
+    animation: fadeSimple 3.5s ease-in-out 3.5s forwards;    
+    }
+  
+}
+  
+@media (max-width: 900px) {
+    .header{
+        margin-top: 50px;
+
+        .title{
+            text-align: center;
+        }
+
+        .parragraph{
+        text-align: center;
+        }
+    
+        .hero-img {
+        margin-top: 100px;
+        }
+    
+        header .hero-content {
+        margin-bottom: 110px;
+        text-align: center;
+        }
+    }
+  
+}
+
+@keyframes fadeSimple {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+

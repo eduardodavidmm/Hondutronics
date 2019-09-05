@@ -1,0 +1,40 @@
+.sign-in {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .title{
+    color: #243949;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10%;
+    padding: 5%;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+  
+@media (max-width: 900px) {
+  .sign-in {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+    border-bottom: 1px solid rgba(0,0,0, 0.5);
+  
+    .title {
+      margin: 10px 0;
+    }
+
+    .custom-button {
+      display: flex;
+      font-size: 12px;
+    }
+  }
+}

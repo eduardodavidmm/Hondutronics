@@ -1,0 +1,32 @@
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+
+    .title{
+        color: #243949;
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 1%;
+        padding: 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .sign-up {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    
+        .title {
+            margin: 10px 0;
+        }
+
+        .custom-button {
+            font-size: 12px;
+        }
+    }
+}

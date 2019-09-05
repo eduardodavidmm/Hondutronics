@@ -1,0 +1,96 @@
+.call-action-primary {
+    background: url(../../assets/call-action-primary.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 25px;
+    padding: 10%;
+}
+
+.bg-gradient-primary {
+    background: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      color-stop(1%, #4481eb),
+      to(#04befe)
+    );
+    background: linear-gradient(-90deg, #4481eb 1%, #04befe 100%);
+  }
+  
+  .call-action-head {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .call-action-text {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    max-width: 620px;
+    margin: auto;
+    line-height: 1.5;
+  }
+  
+  .call-action-primary-input {
+    border-radius: 27px;
+    background-color: #f4f4f4;
+    border: 0;
+    height: 49px;
+    position: relative;
+    padding-left: 20px;
+    color: #666666;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-weight: 400;
+  }
+  
+  .call-action-primary-btn {
+    background-color: #04befe;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    -webkit-appearance: none;
+    border-color: #04befe;
+    border-radius: 0 27px 27px 0;
+    height: 49px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .call-action-primary{
+      width: 100%;;
+    }
+    .call-action-primary-content h1 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .call-action-primary-input {
+      border-radius: 27px;
+      color: #666666;
+      font-size: 12px;
+    }
+
+    .call-action-text {
+      font-size: 12px;
+      font-weight: 400;
+      display: block;
+      max-width: 620px;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+    .call-action-primary-btn {
+      background-color: #04befe;
+      border-color: #04befe;
+      align-items: center;
+      font-size: 8px;
+    }
+}
+  

@@ -1,0 +1,422 @@
+const SHOP_DATA = {
+     smart: {
+      id: 1,
+      title: 'Smart',
+      routeName: 'smart',
+      items: [
+            {
+            id: 101,
+            name: "Insteon Hub II",
+            image: "../img/insteonhubii.png",
+            price: 79,
+            company: "Insteon",
+            info: "El cerebro de tu casa inteligente. Sirve como puente entre WiFi y red eléctrica para envío de comandos Insteon. Se requiere para controlar productos Insteon desde tablets, smartphones y computadoras. También sirve para ver cámaras IP.",
+          },
+          {
+            id: 102,
+            name: "Switchlinc Relay",
+            image: "../img/insteonswitchlinkrelay.png",
+            price: 25,
+            company: "Insteon",
+            info: "Interruptor de pared de un botón, función On/Off. Para luminarias fluorescentes o aplicaciones eléctricas como bombas, ventiladores, etc. 1800 watts, funciona con escenarios y horarios.",
+          },
+          {
+            id: 103,
+            name: "Appliancelinc (Externo)",
+            image: "../img/insteonappliancelinc.png",
+            price: 49,
+            company: "Insteon",
+            info: "Tomacorrientes para aparatos eléctricos. Funcion on/off, se conecta a la corriente eléctrica y el aparato a controlar en él. Entra en escenarios. Hasta 15 amp 1800 watts, funciona con escenarios y horarios.",
+          },
+          {
+            id: 104,
+            name: "Outlet",
+            image: "../img/insteonoutlet.png",
+            price: 49,
+            company: "Insteon",
+            info: "Tomacorrientes instalado en pared, ideal para sustituir tomacorrientes tradicionales. Soporta hasta 480 watts 15 amperios. Perfecto para lámparas, cafeteras, planchas, etc.",
+          },
+          {
+            id: 105,
+            name: "Range Extender",
+            image: "../img/insteonrangeextender.png",
+            price: 47,
+            company: "Insteon",
+            info: "Sirve como antena de comunicación INSTEON, une las diferentes fases eléctricas y comunica equipos INSTEON de Radiofrecuencia con la red eléctrica. Amplia el rango de funcionamiento de la red Radiofrecuencia.",
+          },
+          {
+            id: 106,
+            name: "Open/Close Sensor",
+            image: "../img/insteonopenclose.png",
+            price: 30,
+            company: "Insteon",
+            info: "Sensor de Apertura y Cierre inalámbrico, que puede ser usado en Puertas o Ventanas.",
+          },
+          {
+            id: 107,
+            name: "Motion Sensor",
+            image: "../img/insteonmotionsensor.png",
+            price: 52,
+            company: "Insteon",
+            info: "Sensor inalámbrico de movimiento, para activar alarmas o controlar otros aparatos inteligentes.",
+          },
+          {
+            id: 108,
+            name: "Water Leak Sensor",
+            image: "../img/insteonwaterleak.png",
+            price: 69,
+            company: "Insteon",
+            info: "Sensor inalámbrico especializado para detección de fugas de agua.",
+          },
+          {
+            id: 109,
+            name: "Siren",
+            image: "../img/insteonsiren.png",
+            price: 60,
+            company: "Insteon",
+            info: "Una poderosa sirena de hasta 115 db para crear un sistema de alerta con INSTEON. Se aparea con los sensores de INSTEON para crear un sistema personalizado de alertas. Se conecta simplemente a un outlet común de pared y su programación es muy sencilla. Cuenta con un modo “chime” (campana de aviso) con tono más amable para alerta de situaciones menos críticas.",
+          },
+          {
+            id: 110,
+            name: "Camera IP HD",
+            image: "../img/insteoncamera.png",
+            price: 56,
+            company: "Insteon",
+            info: "Poderosa cámara con función inalámbrica, visión nocturna, micrófono, 40X480 resolución, detección de movimiento.",
+          },
+          {
+            id: 111,
+            name: "Insteon Lock",
+            image: "../img/insteonlock.png",
+            price: 30,
+            company: "Insteon",
+            info: "Excelente opción para la seguridad de tu espacio. Cerradura digital con apertura remota o manual con llave. Tipo pasador, con esta cerradura de puede integrar perfectamente a la Red INSTEON.",
+          },
+          {
+            id: 112,
+            name: "Tp-Link A19 Yellow",
+            image: "../img/tplinkbulb.png",
+            price: 500,
+            company: "Tp-Link",
+            info: "Una opción perfecta para la iluminación de tus espacios. No requiere cerebro inteligente, reemplaza a un bombillo normal. Con control remoto, horarios y modo “viaje”.",
+          },
+          {
+            id: 113,
+            name: "Tp-Link Yellow/White",
+            image: "../img/tplinkbulb.png",
+            price: 500,
+            company: "Tp-Link",
+            info: "Una opción aún más versátil para la iluminación de tus espacios, con dos opciones de colores. No requiere cerebro inteligente, reemplaza a un bombillo normal. Con control remoto, horarios y modo “viaje”.",
+          },
+          {
+            id: 114,
+            name: "SmartPlug HS100",
+            image: "../img/tplinkplug.png",
+            price: 480,
+            company: "Tp-Link",
+            info: "El tomacorrientes inteligente que te permite crear horarios y manejar remotamente cualquier aparato de 110-120v. Se conecta en cualquier tomacorrientes tradicional, y permite manejar de forma efectiva los electrodomésticos para consumo energético.",
+          },
+          {
+            id: 115,
+            name: "Light Switch HS200",
+            image: "../img/tplinkswitch.png",
+            price: 637,
+            company: "Tp-Link",
+            info: "Controla tus luces o tu ventilador de techo con el interruptor inteligente. Se instala como un interruptor tradicional. Funciona con horarios y con control remoto.",
+          },
+          {
+            id: 116,
+            name: "LightBulb A19",
+            image: "../img/frankeverbulb.png",
+            price: 16,
+            company: "Frankever",
+            info: "Una muy versátil opción para diferentes ambientes y gustos. Reemplaza a un bombillo tradicional, diferentes tonos de amarillo, blanco, rojo, verde y azul. Escenas y programación de horarios, con control remoto y agenda de funcionamiento.",
+          },
+          {
+            id: 117,
+            name: "SmartPlug PW801",
+            image: "../img/frankeverplug.png",
+            price: 12,
+            company: "Frankever",
+            info: "Un amigable tomacorrientes inteligente que te permite crear horarios y manejar remotamente cualquier aparato de 110-240v. Se conecta en cualquier tomacorrientes tradicional, y permite manejar de forma efectiva los electrodomésticos para consumo energético.",
+          },
+          {
+            id: 118,
+            name: "SmartPlug PW301U",
+            image: "../img/frankeversmartplug.png",
+            price: 14,
+            company: "Frankever",
+            info: "Otra opción versátil para tomacorrientes inteligente, ésta con salida USB para cargar tu celular o Tablet, que te permite crear horarios y manejar remotamente cualquier aparato de 110-240v. Se conecta en cualquier tomacorrientes tradicional.",
+          },
+          {
+            id: 119,
+            name: "Smart PowerStrip",
+            image: "../img/frankeverpowerstrip.png",
+            price: 32,
+            company: "Frankever",
+            info: "Una poderosa opción para sustituir tu regleta tradicional y conectar varios aparatos en un solo lugar de carga. Múltiples conexiones 125v, con dos salidas USB para tus celulares y tabletas, todas controladas independientemente para tu comodidad.",
+          },
+          {
+            id: 120,
+            name: "Smart WiFi Camera",
+            image: "../img/frankevercam.png",
+            price: 16,
+            company: "Frankever",
+            info: "Una cámara inteligente para el monitoreo 24/7 de tu espacio (casa, apartamento u oficina). Puede ser accedida a través de tu celular. Con resolución de 1280x720 pixeles, con ranura para memoria SD para grabación de video.",
+          },
+          {
+            id: 121,
+            name: "Smart Led Light Strip",
+            image: "../img/frankeverlightstrip.png",
+            price: 26,
+            company: "Frankever",
+            info: "Una cinta de luces LED para la decoración e iluminación de cualquier espacio. Con luces de tonos en verde, rojo, azul y blanco, con programación de horarios y manejo remoto.",
+          },
+          {
+            id: 122,
+            name: "Smart Led Light String",
+            image: "../img/frankeverlightstring.png",
+            price: 16,
+            company: "Frankever",
+            info: "Una red de 12 bombillos LED ideal para decoración de exteriores y patios. Con luces en tonos de azul, verde y rojo.",
+          },
+          {
+            id: 123,
+            name: "Smart IR Box",
+            image: "../img/frankeverirbox.png",
+            price: 8,
+            company: "Frankever",
+            info: "Un controlador inteligente de aparatos infrarrojos compatible con televisores, aires acondicionados, equipos de sonidos y otros.",
+          },
+          {
+            id: 124,
+            name: "Tile Mate",
+            image: "../img/tilemate.png",
+            price: 23,
+            company: "Tile",
+            info: "Un buscador inteligente de objetos, apropiado para colocar en carteras, llaves, tablets, maletines y muchos más. Con tecnología Bluetooth, te permite localizar con sonido si el objeto está en rango, y si no, a través de GPS puedes ver su ubicación en cualquier lado del mundo",
+          }
+      ]
+    },
+    seguridad: {
+      id: 2,
+      title: 'Seguridad',
+      routeName: 'seguridad',
+      items: [
+        {
+            id: 106,
+            name: "Open/Close Sensor",
+            image: "../img/insteonopenclose.png",
+            price: 30,
+            company: "Insteon",
+            info: "Sensor de Apertura y Cierre inalámbrico, que puede ser usado en Puertas o Ventanas.",
+          },
+          {
+            id: 107,
+            name: "Motion Sensor",
+            image: "../img/insteonmotionsensor.png",
+            price: 52,
+            company: "Insteon",
+            info: "Sensor inalámbrico de movimiento, para activar alarmas o controlar otros aparatos inteligentes.",
+          },
+          {
+            id: 108,
+            name: "Water Leak Sensor",
+            image: "../img/insteonwaterleak.png",
+            price: 69,
+            company: "Insteon",
+            info: "Sensor inalámbrico especializado para detección de fugas de agua.",
+          },
+          {
+            id: 109,
+            name: "Siren",
+            image: "../img/insteonsiren.png",
+            price: 60,
+            company: "Insteon",
+            info: "Una poderosa sirena de hasta 115 db para crear un sistema de alerta con INSTEON. Se aparea con los sensores de INSTEON para crear un sistema personalizado de alertas. Se conecta simplemente a un outlet común de pared y su programación es muy sencilla. Cuenta con un modo “chime” (campana de aviso) con tono más amable para alerta de situaciones menos críticas.",
+          },
+          {
+            id: 110,
+            name: "Camera IP HD",
+            image: "../img/insteoncamera.png",
+            price: 56,
+            company: "Insteon",
+            info: "Poderosa cámara con función inalámbrica, visión nocturna, micrófono, 40X480 resolución, detección de movimiento.",
+          },
+          {
+            id: 111,
+            name: "Insteon Lock",
+            image: "../img/insteonlock.png",
+            price: 30,
+            company: "Insteon",
+            info: "Excelente opción para la seguridad de tu espacio. Cerradura digital con apertura remota o manual con llave. Tipo pasador, con esta cerradura de puede integrar perfectamente a la Red INSTEON.",
+          },
+          {
+            id: 120,
+            name: "Smart WiFi Camera",
+            image: "../img/frankevercam.png",
+            price: 16,
+            company: "Frankever",
+            info: "Una cámara inteligente para el monitoreo 24/7 de tu espacio (casa, apartamento u oficina). Puede ser accedida a través de tu celular. Con resolución de 1280x720 pixeles, con ranura para memoria SD para grabación de video.",
+          },
+          {
+            id: 124,
+            name: "Tile Mate",
+            image: "../img/tilemate.png",
+            price: 23,
+            company: "Tile",
+            info: "Un buscador inteligente de objetos, apropiado para colocar en carteras, llaves, tablets, maletines y muchos más. Con tecnología Bluetooth, te permite localizar con sonido si el objeto está en rango, y si no, a través de GPS puedes ver su ubicación en cualquier lado del mundo",
+          }
+      ]
+    },
+    ahorro: {
+      id: 3,
+      title: 'Ahorro',
+      routeName: 'ahorro',
+      items: [
+        {
+          id: 117,
+          name: "SmartPlug PW801",
+          image: "../img/frankeverplug.png",
+          price: 12,
+          company: "Frankever",
+          info: "Un amigable tomacorrientes inteligente que te permite crear horarios y manejar remotamente cualquier aparato de 110-240v. Se conecta en cualquier tomacorrientes tradicional, y permite manejar de forma efectiva los electrodomésticos para consumo energético.",
+        },
+        {
+          id: 118,
+          name: "SmartPlug PW301U",
+          image: "../img/frankeversmartplug.png",
+          price: 14,
+          company: "Frankever",
+          info: "Otra opción versátil para tomacorrientes inteligente, ésta con salida USB para cargar tu celular o Tablet, que te permite crear horarios y manejar remotamente cualquier aparato de 110-240v. Se conecta en cualquier tomacorrientes tradicional.",
+        },
+        {
+          id: 119,
+          name: "Smart PowerStrip",
+          image: "../img/frankeverpowerstrip.png",
+          price: 32,
+          company: "Frankever",
+          info: "Una poderosa opción para sustituir tu regleta tradicional y conectar varios aparatos en un solo lugar de carga. Múltiples conexiones 125v, con dos salidas USB para tus celulares y tabletas, todas controladas independientemente para tu comodidad.",
+        },
+        {
+            id: 101,
+            name: "Insteon Hub II",
+            image: "../img/insteonhubii.png",
+            price: 79,
+            company: "Insteon",
+            info: "El cerebro de tu casa inteligente. Sirve como puente entre WiFi y red eléctrica para envío de comandos Insteon. Se requiere para controlar productos Insteon desde tablets, smartphones y computadoras. También sirve para ver cámaras IP.",
+          },
+          {
+            id: 102,
+            name: "Switchlinc Relay",
+            image: "../img/insteonswitchlinkrelay.png",
+            price: 25,
+            company: "Insteon",
+            info: "Interruptor de pared de un botón, función On/Off. Para luminarias fluorescentes o aplicaciones eléctricas como bombas, ventiladores, etc. 1800 watts, funciona con escenarios y horarios.",
+          },
+          {
+            id: 103,
+            name: "Appliancelinc (Externo)",
+            image: "../img/insteonappliancelinc.png",
+            price: 49,
+            company: "Insteon",
+            info: "Tomacorrientes para aparatos eléctricos. Funcion on/off, se conecta a la corriente eléctrica y el aparato a controlar en él. Entra en escenarios. Hasta 15 amp 1800 watts, funciona con escenarios y horarios.",
+          },
+          {
+            id: 104,
+            name: "Outlet",
+            image: "../img/insteonoutlet.png",
+            price: 49,
+            company: "Insteon",
+            info: "Tomacorrientes instalado en pared, ideal para sustituir tomacorrientes tradicionales. Soporta hasta 480 watts 15 amperios. Perfecto para lámparas, cafeteras, planchas, etc.",
+          },
+          {
+            id: 112,
+            name: "Tp-Link A19 Yellow",
+            image: "../img/tplinkbulb.png",
+            price: 500,
+            company: "Tp-Link",
+            info: "Una opción perfecta para la iluminación de tus espacios. No requiere cerebro inteligente, reemplaza a un bombillo normal. Con control remoto, horarios y modo “viaje”.",
+          },
+          {
+            id: 113,
+            name: "Tp-Link Yellow/White",
+            image: "../img/tplinkbulb.png",
+            price: 500,
+            company: "Tp-Link",
+            info: "Una opción aún más versátil para la iluminación de tus espacios, con dos opciones de colores. No requiere cerebro inteligente, reemplaza a un bombillo normal. Con control remoto, horarios y modo “viaje”.",
+          },
+          {
+            id: 114,
+            name: "SmartPlug HS100",
+            image: "../img/tplinkplug.png",
+            price: 480,
+            company: "Tp-Link",
+            info: "El tomacorrientes inteligente que te permite crear horarios y manejar remotamente cualquier aparato de 110-120v. Se conecta en cualquier tomacorrientes tradicional, y permite manejar de forma efectiva los electrodomésticos para consumo energético.",
+          },
+          {
+            id: 115,
+            name: "Light Switch HS200",
+            image: "../img/tplinkswitch.png",
+            price: 637,
+            company: "Tp-Link",
+            info: "Controla tus luces o tu ventilador de techo con el interruptor inteligente. Se instala como un interruptor tradicional. Funciona con horarios y con control remoto.",
+          },
+          {
+            id: 116,
+            name: "LightBulb A19",
+            image: "../img/frankeverbulb.png",
+            price: 16,
+            company: "Frankever",
+            info: "Una muy versátil opción para diferentes ambientes y gustos. Reemplaza a un bombillo tradicional, diferentes tonos de amarillo, blanco, rojo, verde y azul. Escenas y programación de horarios, con control remoto y agenda de funcionamiento.",
+          }
+      ]
+    }
+    /*
+    paquetespersonalizados: {
+      id: 4,
+      title: 'Paquetes Personalizados',
+      routeName: 'paquetespersonalizados',
+      items: [
+        {
+          id: 201,
+          name: 'Tu Cuarto',
+          price: 1230.00
+        },
+        {
+          id: 202,
+          name: 'Tu Casa',
+          price: 6125.00
+        },
+        {
+          id: 203,
+          name: 'Tu Negocio',
+          price: 5325.00
+        }
+      ]
+    },
+    promo: {
+      id: 5,
+      title: 'Promociones',
+      routeName: 'promo',
+      items: [
+        {
+            id: 201,
+            name: 'Tu Cuarto',
+            price: 1230.00
+          },
+          {
+            id: 202,
+            name: 'Tu Casa',
+            price: 6125.00
+          },
+          {
+            id: 203,
+            name: 'Tu Negocio',
+            price: 5325.00
+          }
+      ]
+    }*/
+};
+  
+export default SHOP_DATA;

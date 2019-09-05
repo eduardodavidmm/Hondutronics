@@ -1,0 +1,49 @@
+.demo{
+    
+    .title{
+        text-align: center;
+        margin-top: -100px;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .switch {
+        position: absolute;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        right: 10px;
+        top: 10px;
+      }
+      
+
+      .card{
+        display: block;
+        padding: 5%;
+        margin-top: 5%;
+        border-radius: 15px;
+        border: none;
+      }
+
+      .iconsmart{
+        color: #04befe;
+      }
+
+}
+
+@media (max-width: 900px) {
+    .demo{
+
+        .title{
+            margin-top: -100px;
+        }
+
+        p{
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}

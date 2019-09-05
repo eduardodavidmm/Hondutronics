@@ -1,0 +1,53 @@
+.partners {
+
+    padding: 5%;
+    
+    .title{
+        color: #243949;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10%;
+    }
+
+    .partners-horiz-list {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    }
+  
+    .partners-horiz-item {
+    width: 30%;
+    display: inline-block;
+    }
+  
+    .partners-horiz-item img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+  
+    .partners-horiz-item:hover img {
+    -webkit-filter: none;
+    filter: none;
+    cursor: pointer;
+    }
+}
+  
+@media (max-width: 900px) {
+    .partners {
+        padding: 5%;
+        margin: 5%;
+      
+        .partners-horiz-item {
+        width: 100%;
+        }
+        
+        .partner-img {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+    }
+}
+  

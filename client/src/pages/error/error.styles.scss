@@ -1,0 +1,38 @@
+.error{
+    margin-top: 0px;
+    display: block;
+    margin-bottom: 200px;
+
+    .title{
+        color: #243949;
+        font-size: 38px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .link {
+        text-align: center;
+        font-size: 26px;
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .error{
+        margin-top: 0px;
+        display: block;
+    
+        .title{
+            color: #243949;
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+        }
+    
+        .link {
+            text-align: center;
+            font-size: 26px;
+            margin-left: 20%;
+        }
+    }
+}
