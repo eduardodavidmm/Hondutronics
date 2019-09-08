@@ -8,6 +8,10 @@
         margin-bottom: 40px;
     }
 
+    .scroll{
+        color: #0072ff;
+    }
+
     p   {
         text-align: justify;
         margin: 20px;
@@ -40,7 +44,7 @@
         .card{
         cursor: pointer;
         border: none;
-        background-color: #f7f7f7;
+        background-color: #04befe;
         border-radius: 25px;
         text-align: justify;
         padding: 0px;
@@ -49,29 +53,33 @@
         -webkit-transition: all 0.25s ease;
         transition: all 0.25s ease;
         overflow: hidden;
-        height: 300px;
+        height: 290px;
         display: flex;
+        color: #fff;
 
         .h4{
             padding-top: 10px;
-            color: #04befe;
+            color: #fff;
             text-align: center;
             font-weight: bold;
+            margin-top: auto;
         }
 
         p{
             font-size: 13px;
+            color: #fff;
+            margin-bottom: auto;
         }
 
         &:hover{
-            -webkit-box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.3);
-            box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.7);
         }
         }
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .about {
         .embed-container iframe {
             position: absolute;
@@ -83,13 +91,16 @@
         }
         
         .prob{
+            padding: 5%;
 
         .card{
             height: auto;
             margin-bottom: 20px;
+            padding: 2%;
 
             p{
                 font-size: 12px;
+                margin: 20px;
             }
         }
         }

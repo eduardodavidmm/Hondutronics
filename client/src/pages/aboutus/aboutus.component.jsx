@@ -2,10 +2,14 @@ import React from 'react';
 import Bubbles from '../../components/bubbles/bubbles.component';
 import Partners from '../../components/partners/partners.component';
 import './aboutus.styles.scss';
+import BackToTop from 'react-back-to-top-button';
 
 const AboutUs = () => (
     <div className="container about">
         <Bubbles></Bubbles>
+        <BackToTop showOnScrollUp showAt={5} speed={1000} easing="easeInOutQuint">
+            <i class="fas fa-angle-double-up scroll"></i>
+        </BackToTop>
         <h1 className="title">Hondutronics</h1>
         <div className="row">
             <div className="col-md-6">
@@ -40,36 +44,37 @@ const AboutUs = () => (
         </p>
 
         <div className="row prob">
-                
-                <div className="card col-md-3">
-                <h4 className="h4">Los altos costos de la energía</h4>
-                <p>
-                Actualmente nuestro mercado
-                cuenta con uno de los costos más elevados de energía, por
-                lo cual creamos una herramienta que permite al cliente
-                acceder a planes personalizados de ahorro, alimentados por
-                tecnología inteligente.
-                </p>
-                </div>
-                <div className="card col-md-3">
+
+
+            <div className="card col-md-3">
                 <h4 className="h4">Los altos niveles de inseguridad</h4>
                 <p>
-                Los productos inteligentes
-                pueden representar una herramienta para reforzar la seguridad de
-                los clientes en sus espacios a través de herramientas de alarma y
-                monitoreo.
+                    Los productos inteligentes
+                    pueden representar una herramienta para reforzar la seguridad de
+                    los clientes en sus espacios a través de herramientas de alarma y
+                    monitoreo.
                 </p>
-                </div>
-                <div className="card col-md-3">
+            </div>
+            <div className="card col-md-3">
+                <h4 className="h4">Los altos costos de la energía</h4>
+                <p>
+                    Actualmente nuestro mercado
+                    cuenta con uno de los costos más elevados de energía, por
+                    lo cual creamos una herramienta que permite al cliente
+                    acceder a planes personalizados de ahorro, alimentados por
+                    tecnología inteligente.
+                </p>
+            </div>
+            <div className="card col-md-3">
                 <h4 className="h4">La falta comodidad</h4>
                 <p>
-                El mundo en el que vivimos exige cada vez más
-                que la interacción con nuestro entorno sea fácil y que atienda de
-                manera inmediata nuestras necesidades.
+                    El mundo en el que vivimos exige cada vez más
+                    que la interacción con nuestro entorno sea fácil y que atienda de
+                    manera inmediata nuestras necesidades.
                 </p>
-                </div>
+            </div>
         </div>
-            
+
         <div className="row">
             <div className="col-md-6 embed-container">
                 <iframe title="demo2" width="560" height="315" src="https://www.youtube.com/embed/izEHi0apJmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
