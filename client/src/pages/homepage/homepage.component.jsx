@@ -18,7 +18,7 @@ const HomePage = () => (
     </BackToTop>
     <Header />
     <Pills />
-    <Slide top>
+    <Slide bottom>
       <Media />
     </Slide>
     <Slide bottom>
@@ -28,7 +28,7 @@ const HomePage = () => (
       <PriceTables />
     </Slide>
     <Testimonials />
-    <Slide top>
+    <Slide bottom>
       <Partners />
     </Slide>
     <Subscription />

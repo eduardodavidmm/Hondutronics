@@ -19,13 +19,13 @@ const Partners = () => (
                 <div className="col-sm-12">
                     <ul className="partners-horiz-list clearfix justify-content-center">
                         <li className="partners-horiz-item">
-                            <img src={PartnerOne} className="img-fluid partner-img" alt="partner" />
+                            <a href="http://www.frankever.com/index.aspx" target="_blank" rel="noopener noreferrer"><img src={PartnerOne} className="img-fluid partner-img" alt="partner" /></a>
                         </li>
                         <li className="partners-horiz-item">
-                            <img src={PartnerTwo} className="img-fluid partner-img" alt="partner" />
+                            <a href="https://www.insteon.com/" target="_blank" rel="noopener noreferrer"><img src={PartnerTwo} className="img-fluid partner-img" alt="partner" /></a>
                         </li>
                         <li className="partners-horiz-item">
-                            <img src={PartnerThree} className="img-fluid partner-img" alt="partner" />
+                            <a href="https://www.tp-link.com/" target="_blank" rel="noopener noreferrer"><img src={PartnerThree} className="img-fluid partner-img" alt="partner" /></a>
                         </li>
                     </ul>
                 </div>

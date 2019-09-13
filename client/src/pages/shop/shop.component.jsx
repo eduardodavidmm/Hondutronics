@@ -7,6 +7,8 @@ import CollectionPage from '../collection/collection.component';
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
 import BackToTop from 'react-back-to-top-button';
+import PriceTables from '../../components/price-tables/price-tables.component';
+import './shop.styles.scss';
 
 class ShopPage extends React.Component {
 
@@ -26,6 +28,7 @@ class ShopPage extends React.Component {
                     </BackToTop>
                     <Route exact path={`${match.path}`} component={CollectionsOverview} />
                     <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
+                    <PriceTables></PriceTables>
                 </div>
             )
         );
