@@ -12,30 +12,32 @@ const CheckoutPage = ({ cartItems, total }) => {
 
   const swalfunction = () => {
     swal.mixin({
-        confirmButtonText: 'Next &rarr;',
-        showCancelButton: true,
-        progressSteps: ['1', '2']
-      }).queue([
-        {
-            title: 'Nuestros Productos',
-            html: 
-            '<p>Recuerda que también puedes comprar paquetes personalizados.</p>'
-          },{
-            title: 'Compra',
-            html:
-            'Nombre: <input id="swal-input1.2" placeholder="Walther" class="swal2-input">' +
-            'Correo: <input id="swal-input2.2" placeholder="walther@hondutronics.com" class="swal2-input">' +
-            'Numero de Celular: <input id="swal-input3.2" placeholder="99668899" class="swal2-input">' +
-            '<p>Se te contactará con la mayor brevedad posible para brindarte atención personalizada.</p>'
-          }
-      ]).then((result) => {
-        if (result.value) {
-          swal.fire({
-            title: '¡Compra Realizada!',
-            confirmButtonText: 'Finalizar'
-          })
-        }
-      })
+      confirmButtonText: 'Next &rarr;',
+      showCancelButton: true,
+      progressSteps: ['1', '2']
+    }).queue([
+      {
+        title: 'Nuestros Productos',
+        html:
+          '<p>Recuerda que también puedes comprar paquetes personalizados.</p>'
+      }, {
+        title: 'Compra',
+        html:
+          'Nombre: <input id="swal-input1.2" placeholder="Walther" class="swal2-input">' +
+          'Correo: <input id="swal-input2.2" placeholder="walther@hondutronics.com" class="swal2-input">' +
+          'Numero de Celular: <input id="swal-input3.2" placeholder="99668899" class="swal2-input">' +
+          '<p>Se te contactará con la mayor brevedad posible para brindarte atención personalizada.</p>'
+      }
+    ]).then((result) => {
+      if (result.value) {
+        swal.fire({
+          type: 'success',
+          title: '¡Compra Realizada!',
+          text: 'Espera nuestro contacto para confirmar la compra',
+          confirmButtonText: 'Finalizar'
+        })
+      }
+    })
   }
 
   return (
