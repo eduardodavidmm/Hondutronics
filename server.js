@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
-const nodemailer = require('nodemailer');
+
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -12,43 +13,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
 
-if(process.env.NODE_ENV == 'production') {
-    app.use(express.static(path.join(__dirname, 'client/build')));
+if (process.env.NODE_ENV === 'production') {
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 
-    app.get('*', function(req, res){
-        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-    });
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
 }
 
-app.listen(port, error =>{
-    if (error) throw error;
-    console.log('Server running on port' + port);
+app.listen(port, error => {
+  if (error) throw error;
+  console.log('Server running on port ' + port);
 });
 
-require('dotenv').config();
-
-const nodemailer = require('nodemailer');
-const log = console.log;
-
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD
-    }
+app.get('/service-worker.js', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
 });
-
-let mailOptions = {
-    from: 'abc@gmail.com',
-    to: 'cba@gmail.com',
-    subject: 'Nodemailer - Test',
-    text: 'Test'
-};
-
-transporter.sendMail(mailOptions, (err, data) => {
-    if (err) {
-        return log('Error occurs');
-    }
-    return log('Email sent!!!');
-});
-
