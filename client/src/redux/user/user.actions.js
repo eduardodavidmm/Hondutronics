@@ -51,3 +51,21 @@ export const signUpFailure = error => ({
     payload: error
 })
 
+export const subscriptionSuccess = (subscriber) => {
+    return(dispatch, {getFirestore}) => {
+        const firestore = getFirestore();
+        firestore.collection('subscriptions').add({
+            ...subscriber,
+            createdAt: new Date()
+        }).then(() => {
+            dispatch({ type: 'SUBSCRIPTION_SUCCESS', subscriber});
+        }).catch((err) => {
+            dispatch({type: 'SUBSCRIPTION_FAILURE', err});
+        })
+    }
+};
+
+export const subscriptionFailure = error => ({
+    type: UserActionTypes.SUBSCRIPTION_FAILURE,
+    payload: error
+});

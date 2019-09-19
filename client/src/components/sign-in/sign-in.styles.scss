@@ -16,6 +16,13 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .custom-button .fab {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -10px;
+    margin-right: 10px;
+  }
 }
 
   
@@ -35,6 +42,10 @@
     .custom-button {
       display: flex;
       font-size: 12px;
+    }
+
+    .custom-button .fab{
+      display: none;
     }
   }
 }

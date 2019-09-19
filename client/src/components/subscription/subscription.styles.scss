@@ -1,7 +1,7 @@
 .call-action-primary {
     background: url(../../assets/call-action-primary.png) no-repeat center center;
     background-size: cover;
-    width: 100%;
+    width: 120%;
     border-radius: 25px;
     padding: 10%;
 }
@@ -64,7 +64,7 @@
   
   @media (max-width: 768px) {
     .call-action-primary{
-      width: 100%;;
+      width: 160%;;
     }
     .call-action-primary-content h1 {
       margin-top: 0;

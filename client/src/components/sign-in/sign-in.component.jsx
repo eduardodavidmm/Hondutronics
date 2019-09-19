@@ -58,7 +58,7 @@ class SignIn extends React.Component {
           />
           <div className="buttons"> 
           <CustomButton type='submit'> Iniciar Sesión </CustomButton>
-          <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn> {' '} Inicia Sesión con Google {' '} </CustomButton>
+          <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn><i className="fab fa-google"></i>  Inicia Sesión con Google </CustomButton>
           </div>
         </form>
       </div>
