@@ -37,6 +37,22 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     return userRef;
 };
 
+export const createSubscriberDocument = async email => {
+
+    const subscriberRef = firestore.collection('subscriptions').doc();
+    const createdAt = new Date();
+    
+    try {
+        await subscriberRef.set({
+            email, createdAt
+        })
+    } catch(error) {
+        console.log('error creating subscriber', error.message);
+    }
+    
+    return subscriberRef;
+};
+
 export const getUserCartRef = async userId => {
     const cartsRef = firestore.collection('carts').where('userId', '==', userId);
     const snapShot = await cartsRef.get();

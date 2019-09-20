@@ -2,35 +2,43 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './subscription.styles.scss';
 import swal from 'sweetalert2';
-import { subscriptionSuccess } from '../../redux/user/user.actions';
+import { subscriptionStart } from '../../redux/user/user.actions';
 
 class Subscription extends Component {
-    
-    state = {
-            email: ''
-    }
+    constructor() {
+        super();
 
-    swalfunction() {
-                swal.fire({
-                    type: 'success',
-                    title: '¡Subscripción Realizada!',
-                    confirmButtonText: 'Continuar'
-                })
-    }
+        this.state = {
+            email: ''
+        }
+    };
+
 
     handleSubmit = async event => {
         event.preventDefault();
-        this.props.subscriptionSuccess(this.state)
+        const { subscriptionStart } = this.props;
+        const { email } = this.state;
+
+
+        subscriptionStart({ email });
     };
 
-    handleChange = async event => {
-        this.setState({
-            [event.target.id]: event.target.value
+    handleChange = event => {
+        const { email, value } = event.target; 
+
+        this.setState({[email]: value});
+    }
+
+    swalfunction() {
+        swal.fire({
+            type: 'success',
+            title: '¡Subscripción Realizada!',
+            confirmButtonText: 'Continuar'
         })
-    };
-
+    }
 
     render() {
+        const { email } = this.state;
         return (
             <div id="register" className="call-action-primary py-80 ">
                 <div className="container ">
@@ -41,7 +49,7 @@ class Subscription extends Component {
                                 <p className="text-white call-action-text ">Déjanos tu correo electrónico y te notificaremos de nuestros nuevos productos, servicios, eventos de centro de experiencia en vivo y boletines informativos</p>
                                 <form onSubmit={this.handleSubmit} className="mt-5 ">
                                     <div className="input-group call-action-primary-search ">
-                                        <input onChange={this.handleChange} className="form-control call-action-primary-input " placeholder="Correo" />
+                                        <input value={email} onChange={this.handleChange} className="form-control call-action-primary-input " placeholder="Correo" />
                                         <div className="input-group-append">
                                             <button onClick={this.swalfunction} type="submit" className="call-action-primary-btn ">Suscribirse</button>
                                         </div>
@@ -57,7 +65,7 @@ class Subscription extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    subscriptionSuccess: subscriber => dispatch(subscriptionSuccess(subscriber))
+    subscriptionStart: subscriber => dispatch(subscriptionStart(subscriber))
 });
-  
+
 export default connect(null, mapDispatchToProps)(Subscription);

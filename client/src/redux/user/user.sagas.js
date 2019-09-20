@@ -1,7 +1,7 @@
 import { takeLatest, put, all, call } from 'redux-saga/effects';
 import UserActionTypes from './user.types';
 import { signInSuccess, signInFailure, signOutSuccess, signOutFailure, signUpSuccess, signUpFailure, subscriptionSuccess, subscriptionFailure } from './user.actions';
-import { auth, googleProvider, createUserProfileDocument, getCurrentUser } from '../../firebase/firebase.utils';
+import { auth, googleProvider, createUserProfileDocument, getCurrentUser, createSubscriberDocument } from '../../firebase/firebase.utils';
 
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
@@ -62,7 +62,7 @@ export function* signUp({ payload: { email, password, displayName } }) {
 
 export function* subscription({ payload: { email } }) {
     try {
-        const { user } = yield auth.createUserProfileDocument(email);
+        const { user } = yield auth.createSubscriberDocument(email);
         yield put(subscriptionSuccess({ user, additionalData: { email } }));
     } catch (error) {
         yield put(subscriptionFailure(error))
@@ -95,6 +95,10 @@ export function* onSignUpStart() {
 
 export function* onSignUpSuccess() {
     yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp);
+}
+
+export function* onSubscriptionStart() {
+    yield takeLatest(UserActionTypes.SUBSCRIPTION_SUCCESS, subscription);
 }
 
 export function* userSagas() {
