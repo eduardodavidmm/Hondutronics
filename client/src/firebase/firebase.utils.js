@@ -2,12 +2,12 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-const config = {
+export const config = {
     apiKey: "AIzaSyDHaJmvQUscP1koyMhQxAiDzWwUPtTZaUM",
     authDomain: "hondutronicsdb.firebaseapp.com",
     databaseURL: "https://hondutronicsdb.firebaseio.com",
     projectId: "hondutronicsdb",
-    storageBucket: "",
+    storageBucket: "hondutronicsdb.appspot.com",
     messagingSenderId: "456791376568",
     appId: "1:456791376568:web:0ea57537cc849ae3"
 };
@@ -41,7 +41,10 @@ export const createSubscriberDocument = async email => {
 
     const subscriberRef = firestore.collection('subscriptions').doc();
     const createdAt = new Date();
+
+    const snapShot = await subscriberRef.add();
     
+    if(!snapShot.exists) {
     try {
         await subscriberRef.set({
             email, createdAt
@@ -49,6 +52,7 @@ export const createSubscriberDocument = async email => {
     } catch(error) {
         console.log('error creating subscriber', error.message);
     }
+}
     
     return subscriberRef;
 };
@@ -112,5 +116,7 @@ export const firestore = firebase.firestore();
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
+
+
 
 export default firebase;

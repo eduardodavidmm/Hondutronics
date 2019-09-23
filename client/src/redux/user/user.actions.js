@@ -54,14 +54,14 @@ export const signUpFailure = error => ({
 
 /*----------------------------------------------------------*/
 
-export const subscriptionStart = (subscriber) => ({
+export const subscriptionStart = (email) => ({
     type: UserActionTypes.SUBSCRIPTION_START,
-    payload: subscriber
+    payload: email
 });
 
-export const subscriptionSuccess = ({ user, additionalData }) => ({ 
+export const subscriptionSuccess = ({ email }) => ({ 
     type: UserActionTypes.SUBSCRIPTION_SUCCESS,
-    payload: { user, additionalData }
+    payload: email 
 });
 
 export const subscriptionFailure = error => ({

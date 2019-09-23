@@ -43,14 +43,13 @@
   @media (max-width: 900px) {
 
     .features { 
-        padding: 10%;
+        padding: 0%;
         margin-top: 100px;
         
         .cs-infobox-left {
         text-align: center;
         margin-bottom: 0;
         }
-    }
     
     .cs-infobox-center {
         text-align: center;
@@ -77,6 +76,7 @@
         line-height: 1.857;
         margin-top: 15px;
         margin-bottom: 0;
+    }
     }
 }
 

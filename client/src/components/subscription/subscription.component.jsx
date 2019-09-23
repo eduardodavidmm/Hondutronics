@@ -2,31 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './subscription.styles.scss';
 import swal from 'sweetalert2';
-import { subscriptionStart } from '../../redux/user/user.actions';
+import { createSubscriber } from '../../redux/subscriber/subscriber.actions';
 
 class Subscription extends Component {
-    constructor() {
-        super();
 
-        this.state = {
-            email: ''
-        }
+    state = {
+        email: ''
     };
-
 
     handleSubmit = async event => {
         event.preventDefault();
-        const { subscriptionStart } = this.props;
-        const { email } = this.state;
-
-
-        subscriptionStart({ email });
+        this.props.createSubscriber(this.state);
     };
 
     handleChange = event => {
-        const { email, value } = event.target; 
-
-        this.setState({[email]: value});
+        this.setState({
+            [event.target]: event.target.value
+        })
     }
 
     swalfunction() {
@@ -38,7 +30,6 @@ class Subscription extends Component {
     }
 
     render() {
-        const { email } = this.state;
         return (
             <div id="register" className="call-action-primary py-80 ">
                 <div className="container ">
@@ -49,7 +40,7 @@ class Subscription extends Component {
                                 <p className="text-white call-action-text ">Déjanos tu correo electrónico y te notificaremos de nuestros nuevos productos, servicios, eventos de centro de experiencia en vivo y boletines informativos</p>
                                 <form onSubmit={this.handleSubmit} className="mt-5 ">
                                     <div className="input-group call-action-primary-search ">
-                                        <input value={email} onChange={this.handleChange} className="form-control call-action-primary-input " placeholder="Correo" />
+                                        <input type="email" onChange={this.handleChange} className="form-control call-action-primary-input " placeholder="Correo" />
                                         <div className="input-group-append">
                                             <button onClick={this.swalfunction} type="submit" className="call-action-primary-btn ">Suscribirse</button>
                                         </div>
@@ -64,8 +55,11 @@ class Subscription extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    subscriptionStart: subscriber => dispatch(subscriptionStart(subscriber))
-});
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        createSubscriber: (email) => dispatch(createSubscriber(email))
+    }
+}
 
 export default connect(null, mapDispatchToProps)(Subscription);

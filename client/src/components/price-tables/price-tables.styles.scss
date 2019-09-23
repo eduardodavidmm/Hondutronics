@@ -115,6 +115,9 @@
 }
   
   @media (max-width: 900px) {
+    .cs-price-card {
+      max-width: 370px;
+
     .cs-price-card-info {
       padding: 20px;
     }
@@ -134,4 +137,5 @@
     .cs-price-card-features li {
       line-height: 2;
     }
+  }
 }

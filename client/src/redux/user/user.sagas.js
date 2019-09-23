@@ -62,8 +62,8 @@ export function* signUp({ payload: { email, password, displayName } }) {
 
 export function* subscription({ payload: { email } }) {
     try {
-        const { user } = yield auth.createSubscriberDocument(email);
-        yield put(subscriptionSuccess({ user, additionalData: { email } }));
+        const { mail } = yield createSubscriberDocument(email);
+        yield put(subscriptionSuccess({ mail }));
     } catch (error) {
         yield put(subscriptionFailure(error))
     }

@@ -14,7 +14,7 @@ import BackToTop from 'react-back-to-top-button';
 const HomePage = () => (
   <div className='homepage'>
     <BackToTop showOnScrollUp showAt={5} speed={1000} easing="easeInOutQuint">
-    <i class="fas fa-angle-double-up scroll"></i>
+    <i className="fas fa-angle-double-up scroll"></i>
     </BackToTop>
     <Header />
     <Pills />
