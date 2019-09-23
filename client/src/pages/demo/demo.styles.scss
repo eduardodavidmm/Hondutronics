@@ -14,6 +14,7 @@
     .h3 {
         margin-top: 50px;
         text-align: center;
+        font-weight: bold;
     }
 
     .switch {
@@ -38,6 +39,25 @@
         color: #04befe;
       }
 
+      .iconconv{
+          color: #000000;
+      }
+
+      .democont{
+        background-color: #FFF;
+        border-radius: 25px;
+        padding: 2%;
+      }
+
+      li{
+          padding-top: 2%;
+          list-style: none;
+      }
+
+      ul{
+          position: relative;
+          left: 30%;
+      }
 }
 
 @media (max-width: 900px) {
@@ -51,6 +71,11 @@
             margin-top: 30px;
             font-size: 14px;
             text-align: center;
+        }
+
+        i{
+            position: relative;
+            left: 10%;
         }
     }
 }

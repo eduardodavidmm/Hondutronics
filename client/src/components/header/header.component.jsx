@@ -56,7 +56,7 @@ export default class Header extends Component {
                         </p>
                                 <div className="pair-btns-list">
                                     <CustomButton onClick={this.swalfunction}>Cotizar</CustomButton>
-                                    <CustomButton><Link to="/demo" className="text-white">Demo</Link></CustomButton>
+                                    <Link to="/demo" className="text-white"><CustomButton>Demo</CustomButton></Link>
                                 </div>
                             </div>
                         </div>
