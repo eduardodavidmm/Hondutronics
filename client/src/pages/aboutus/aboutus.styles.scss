@@ -12,7 +12,7 @@
         color: #0072ff;
     }
 
-    p   {
+    p {
         text-align: justify;
         margin: 20px;
         color: #666666;
@@ -36,47 +36,14 @@
 
     .partnersabout{
         margin-top: 100px;
-      }
-    
-    .prob{
-        align-content: center;
-
-        .card{
-        cursor: pointer;
-        border: none;
-        background-color: #04befe;
-        border-radius: 25px;
-        text-align: justify;
-        padding: 0px;
-        margin: auto;
-        position: relative;
-        -webkit-transition: all 0.25s ease;
-        transition: all 0.25s ease;
-        overflow: hidden;
-        height: 290px;
-        display: flex;
-        color: #fff;
-
-        .h4{
-            padding-top: 10px;
-            color: #fff;
-            text-align: center;
-            font-weight: bold;
-            margin-top: auto;
-        }
-
-        p{
-            font-size: 13px;
-            color: #fff;
-            margin-bottom: auto;
-        }
-
-        &:hover{
-            -webkit-box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.7);
-            box-shadow: 5px 10px 40px 0px rgba(0, 0, 0, 0.7);
-        }
-        }
     }
+
+    .cards{
+        justify-content: space-between;
+        margin-left: -50px;
+        padding: 0;
+    }
+    
 }
 
 @media (max-width: 1000px) {
@@ -89,21 +56,13 @@
             height: 100%;
             border-radius: 15px;
         }
+
+        .cards{
+            justify-content: space-between;
+            margin-left: 20px;
+            padding: 0;
+        }
         
-        .prob{
-            padding: 5%;
-
-        .card{
-            height: auto;
-            margin-bottom: 20px;
-            padding: 2%;
-
-            p{
-                font-size: 12px;
-                margin: 20px;
-            }
-        }
-        }
     }
-  }
+}
   

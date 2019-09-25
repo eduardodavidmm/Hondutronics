@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CustomButton from '../custom-button/custom-button-component';
 import Bubbles from '../bubbles/bubbles.component';
 import { Link } from 'react-router-dom';
 import './header.styles.scss';
 import swal from 'sweetalert2';
 
-export default class Header extends Component {
-    swalfunction() {
+const Header = () => {
+
+    const swalfunction = () => {
         swal.mixin({
             confirmButtonText: 'Next &rarr;',
             showCancelButton: true,
@@ -25,10 +26,10 @@ export default class Header extends Component {
                     '<p>Se te contactará con la mayor brevedad posible para brindarte atención personalizada.</p>'
             }, {
                 title: 'Solución de Problemas',
-                text: 'Nos caracterizamos por solucionar tus problemas de forma personalizada. Cuentanos, ¿Hay algun problema en el que te podríamos ayudar?',
+                text: 'Nos caracterizamos por solucionar tus problemas de forma personalizada. Cuéntanos, ¿Hay algún problema en el que te podríamos ayudar?',
                 input: 'textarea',
-                inputPlaceholder: 'Ejemplo: Quiero que las luces de mi casa se enciendan y apaguen automaticamente',
-                
+                inputPlaceholder: 'Ejemplo: Quiero que las luces de mi casa se enciendan y apaguen automáticamente',
+
             }
         ]).then((result) => {
             if (result.value) {
@@ -41,32 +42,34 @@ export default class Header extends Component {
             }
         })
     }
-    render() {
-        return (
-            <header className="header fixed-top-added" id="hondutronics">
-                <div className="container">
-                    <div className="row">
-                        <Bubbles />
-                        <div className="col-sm-6 col-md-7">
-                            <div className="hero-content">
-                                <h1 className="title">La casa inteligente a tu alcance</h1>
-                                <p className="parragraph mt-3"> La automatización de tu espacio al alcance de tu mano. Ofrecemos paquetes de
-                                  servicios personalizados y ajustados
-                                  a tus gustos y necesidades.
-                        </p>
-                                <div className="pair-btns-list">
-                                    <CustomButton onClick={this.swalfunction}>Cotizar</CustomButton>
-                                    <Link to="/demo" className="text-white"><CustomButton>Demo</CustomButton></Link>
-                                </div>
+
+
+    return (
+        <header className="header fixed-top-added" id="hondutronics">
+            <div className="container">
+                <div className="row">
+                    <Bubbles />
+                    <div className="col-sm-6 col-md-7">
+                        <div className="hero-content">
+                            <h1 className="title">La casa inteligente a tu alcance</h1>
+                            <p className="parragraph mt-3"> La automatización de tu espacio al alcance de tu mano. Ofrecemos paquetes de
+                              servicios personalizados y ajustados
+                              a tus gustos y necesidades.
+                                </p>
+                            <div className="pair-btns-list">
+                                <CustomButton onClick={swalfunction}>Cotizar</CustomButton>
+                                <Link to="/demo" className="text-white"><CustomButton>Demo</CustomButton></Link>
                             </div>
                         </div>
-                        <div className="col-sm-6 col-md-5">
-                            <img src={require('../../assets/casa2.svg')} alt="" className="hero-img img-fluid image" />
-                        </div>
+                    </div>
+                    <div className="col-sm-6 col-md-5">
+                        <img src={require('../../assets/casa2.svg')} alt="" className="hero-img img-fluid image" />
                     </div>
                 </div>
-            </header>
-        )
-    }
+            </div>
+        </header>
+    )
 }
 
+
+export default Header;

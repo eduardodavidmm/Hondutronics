@@ -13,22 +13,24 @@ const Demo = () => (
                         <div>
                             <i className="far fa-lightbulb fa-5x iconsmart"></i>
                             <ul>
-                                <li>$ 3.50</li>
-                                <li>9.3 watts</li>
-                                <li>tiempo transcurrido: 0</li>
-                                <li>consto total: 0</li>
+                                <li>Watts: 8-13</li>
+                                <li>Lumens: 840</li>
+                                <li>Promedio de Duración (años): 18.6</li>
+                                <li>Costo Anual Estimado: $46.65</li>
+                                <li>Emisiones de CO2(KG/año): 205</li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-md-6 trad">
                         <h3 className="h3">Tradicional</h3>
                         <div>
-                            <i className="fas fa-lightbulb fa-5x iconconv"></i>
+                            <i className="far fa-lightbulb fa-5x iconconv"></i>
                             <ul>
-                                <li>$ 13.90</li>
-                                <li>17.3 watts</li>
-                                <li>tiempo transcurrido: 0</li>
-                                <li>consto total: 0</li>
+                                <li>Watts: 60</li>
+                                <li>Lumens: 800</li>
+                                <li>Promedio de Duración (años): 0.9</li>
+                                <li>Costo Anual Estimado: $12.26</li>
+                                <li>Emisiones de CO2(KG/año): 477</li>
                             </ul>
                         </div>
                         <Switch/>
@@ -42,10 +44,7 @@ const Demo = () => (
                         <div>
                             <i className="fas fa-plug fa-5x iconsmart"></i>
                             <ul>
-                                <li>$ 3.50</li>
-                                <li>9.3 watts</li>
-                                <li>tiempo transcurrido: 0</li>
-                                <li>consto total: 0</li>
+                                <li>$</li>
                             </ul>
                         </div>
                     </div>
@@ -54,10 +53,7 @@ const Demo = () => (
                         <div>
                             <i className="fas fa-plug fa-5x iconconv"></i>
                             <ul>
-                                <li>$ 3.50</li>
-                                <li>9.3 watts</li>
-                                <li>tiempo transcurrido: 0</li>
-                                <li>consto total: 0</li>
+                                <li>$</li>
                             </ul>
                         </div>
                         <Switch/>
@@ -71,10 +67,7 @@ const Demo = () => (
                         <div className="data">
                             <i className="fas fa-power-off fa-5x iconsmart"></i>
                             <ul>
-                                <li>$ 3.50</li>
-                                <li>9.3 watts</li>
-                                <li>tiempo transcurrido: 0</li>
-                                <li>consto total: 0</li>
+                                <li>$</li>
                             </ul>
                         </div>
                     </div>
@@ -83,10 +76,7 @@ const Demo = () => (
                         <div className="data">
                             <i className="fas fa-power-off fa-5x iconconv"></i>
                             <ul>
-                                <li>$ 3.50</li>
-                                <li>9.3 watts</li>
-                                <li>tiempo transcurrido: 0</li>
-                                <li>consto total: 0</li>
+                                <li>$</li>
                             </ul>
                         </div>
                         <Switch/>

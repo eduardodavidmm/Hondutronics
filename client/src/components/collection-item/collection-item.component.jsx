@@ -12,7 +12,7 @@ const CollectionItem = ({ item, addItem }) => {
     <div className="collection-item">
         <div className="collection-footer">
                 <span className="name">{name}</span>
-                <span className="price">${price}.00</span>
+                <span className="price">Lps. {price}.00</span>
             </div>
         <div className="image" style={{backgroundImage: `url(${image})`}} />
         <p className="info">{info}</p>

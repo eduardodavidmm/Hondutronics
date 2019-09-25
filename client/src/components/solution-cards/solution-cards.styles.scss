@@ -1,0 +1,104 @@
+.solution{
+    background: #F7F7F7;
+    padding: 10%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.cont{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.solutioncard{
+    margin: 1%;
+}
+
+.cont .solutioncard .face{
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cont .solutioncard .face.face1{
+    position: relative;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.cont .solutioncard:hover .face.face1{
+    background-image: linear-gradient(to right, #3f86ed, #04befe);
+    transform: translateY(0);
+}
+
+.cont .solutioncard .face.face1 .content{
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.cont .solutioncard:hover .face.face1 .content h3{
+    opacity: 1;
+    color: #FFF;
+}
+
+.cont .solutioncard .face.face1 .content img{
+    max-width: 100px;
+}
+
+.cont .solutioncard .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #04befe;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.cont .solutioncard .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100px);
+}
+
+.cont .solutioncard:hover .face.face2{
+    transform: translateY(0);
+}
+
+.cont .solutioncard .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.cont .solutioncard .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #FFF;
+    padding: 5px;
+    border: 1px solid #04befe;
+}
+
+.cont .solutioncard .face.face2 .content a:hover{
+    background: #04befe;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .cont {
+        display: inline-block;
+    }
+  }
