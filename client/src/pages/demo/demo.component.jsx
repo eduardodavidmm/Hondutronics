@@ -2,7 +2,7 @@ import React from 'react';
 import Switch from '../../components/toggle-switch/toggle-switch.component';
 import './demo.styles.scss';
 
-const Demo = () => (
+const DemoPage = () => (
     <div className="container demo">
         <h1 className="title">Demo</h1>
         <p>Consulta datos reales de nuestros productos comparados a productos convencionales</p>
@@ -41,33 +41,10 @@ const Demo = () => (
                     <div className="row">
                     <div className="col-md-6">
                         <h3 className="h3">Smart</h3>
-                        <div>
-                            <i className="fas fa-plug fa-5x iconsmart"></i>
-                            <ul>
-                                <li>$</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <h3 className="h3">Tradicional</h3>
-                        <div>
-                            <i className="fas fa-plug fa-5x iconconv"></i>
-                            <ul>
-                                <li>$</li>
-                            </ul>
-                        </div>
-                        <Switch/>
-                    </div>
-                </div>
-            </div>
-            <div className="container democont">
-                    <div className="row">
-                    <div className="col-md-6">
-                        <h3 className="h3">Smart</h3>
                         <div className="data">
                             <i className="fas fa-power-off fa-5x iconsmart"></i>
                             <ul>
-                                <li>$</li>
+                                <li>data</li>
                             </ul>
                         </div>
                     </div>
@@ -76,7 +53,7 @@ const Demo = () => (
                         <div className="data">
                             <i className="fas fa-power-off fa-5x iconconv"></i>
                             <ul>
-                                <li>$</li>
+                                <li>data</li>
                             </ul>
                         </div>
                         <Switch/>
@@ -87,4 +64,4 @@ const Demo = () => (
 );
 
 
-export default Demo;
+export default DemoPage;

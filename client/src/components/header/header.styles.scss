@@ -25,9 +25,26 @@ header {
     }
     
     .pair-btns-list{
+    margin-left: -20px;
     display: flex;
     opacity: 0;
     animation: fadeSimple 2.5s ease-in-out 2.5s forwards;
+
+    .custom-button{
+        margin: 20px;
+    }
+    
+    }
+  
+}
+
+  
+@media (max-width: 1100px) {
+    .header{
+        .pair-btns-list{
+            margin-right: 0px;
+        }
+          
     }
   
 }
@@ -52,6 +69,18 @@ header {
         margin-bottom: 110px;
         text-align: center;
         }
+
+        .pair-btns-list{
+            margin-right: 0px;
+            display: flex;
+            opacity: 0;
+            animation: fadeSimple 2.5s ease-in-out 2.5s forwards;
+
+            .custom-button{
+                margin: 10px;
+            }
+        }
+          
     }
   
 }

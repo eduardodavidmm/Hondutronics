@@ -19,7 +19,7 @@ const Features = () => (
             </div>
             <div className="row">
                 <div className="col-md-4">
-                    <div className="cs-infobox-left mt-4 aos-init">
+                    <div className="cs-infobox-left mt-4">
                         <Icon1 className="image" />
                         <h4>Fácil monitoreo</h4>
                         <p>De una forma sencilla, rápida y desde la palma de tu mano, puedes llevar el control de todos los
@@ -27,7 +27,7 @@ const Features = () => (
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="cs-infobox-left mt-4 aos-init">
+                    <div className="cs-infobox-left mt-4">
                         <Icon2 className="image" />
                         <h4>Servicio personalizado</h4>
                         <p>Tú eliges que automatizar; desde una lámpara, hasta una automatización total. Proveemos todo el
@@ -35,7 +35,7 @@ const Features = () => (
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="cs-infobox-left mt-4 aos-init">
+                    <div className="cs-infobox-left mt-4">
                         <Icon3 className="image" />
                         <h4>Seguridad</h4>
                         <p>Desde cámaras de video hasta sensores de movimiento inteligentes, tu espacio será un lugar más
@@ -43,7 +43,7 @@ const Features = () => (
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="cs-infobox-left mt-4 aos-init">
+                    <div className="cs-infobox-left mt-4">
                         <Icon4 className="image" />
                         <h4>Eleva tu comodidad</h4>
                         <p>Nunca dejarás tu lámpara o tu plancha encendida. Maneja tu espacio desde cualquier lado del
@@ -51,7 +51,7 @@ const Features = () => (
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="cs-infobox-left mt-4 aos-init">
+                    <div className="cs-infobox-left mt-4">
                         <Icon5 className="image" />
                         <h4>Simulador de energía</h4>
                         <p>Consulta, de forma real e inmediata, el consumo energético de todos tus productos inteligentes en
@@ -59,7 +59,7 @@ const Features = () => (
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="cs-infobox-left mt-4 aos-init">
+                    <div className="cs-infobox-left mt-4">
                         <Icon6 className="image" />
                         <h4>Ahorro</h4>
                         <p>¿Te imaginas reducir en un 30% tu gasto de energía eléctrica? Con nuestros paquetes de
