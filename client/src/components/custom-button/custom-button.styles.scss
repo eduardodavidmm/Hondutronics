@@ -16,6 +16,10 @@
     display: flex;
     justify-content: center;
     background-size: 300% 100%;
+
+    &:focus{
+      outline: none;
+    }
   
     &:hover {
       border: none;

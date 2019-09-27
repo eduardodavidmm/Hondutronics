@@ -1,26 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import CustomButton from '../custom-button/custom-button-component';
 import Bubbles from '../bubbles/bubbles.component';
 import { Link } from 'react-router-dom';
 import './header.styles.scss';
 import swal from 'sweetalert2';
+import { createQuotation } from '../../redux/quotation/quotation.actions';
 
-const Header = () => {
 
-    const swalfunction = () => {
-        swal.mixin({
+class Header extends Component {
+    
+    state = {
+        name: '',
+        email: '',
+        phone: '',
+        quote: ''
+    };
+
+    handleSubmit = async event => {
+        event.preventDefault();
+        this.props.createQuotation(this.state);
+    };
+
+    handleChange = event => {
+        this.setState({
+            [event.target.id]: event.target.value
+        })
+    }
+
+    swalfunction = async () => {
+        await swal.mixin({
             confirmButtonText: 'Next &rarr;',
             showCancelButton: true,
             progressSteps: ['1', '2', '3']
         }).queue([
             {
                 title: 'Nuestros Productos',
-                html:
-                    '<p>Recuerda que también puedes comprar productos de forma individual y paquetes personalizados en la tienda virtual.</p>'
+                text: 'Recuerda que también puedes comprar productos de forma individual y paquetes personalizados en la tienda virtual.'
             }, {
                 title: 'Cotización',
                 html:
-                    'Nombre: <input id="swal-input1.2" placeholder="Walther" class="swal2-input">' +
+                    `Nombre: <input id="swal-input1.2" placeholder="Walther" class="swal2-input">` +
                     'Correo: <input id="swal-input2.2" placeholder="walther@hondutronics.com" class="swal2-input">' +
                     'Numero de Celular: <input id="swal-input3.2" placeholder="99668899" class="swal2-input">' +
                     '<p>Se te contactará con la mayor brevedad posible para brindarte atención personalizada.</p>'
@@ -43,9 +63,9 @@ const Header = () => {
         })
     }
 
-
-    return (
-        <header className="header fixed-top-added" id="hondutronics">
+    render() {
+        return (
+            <header className="header fixed-top-added" id="hondutronics">
             <div className="container">
                 <div className="row">
                     <Bubbles />
@@ -57,7 +77,7 @@ const Header = () => {
                               a tus gustos y necesidades.
                                 </p>
                             <div className="pair-btns-list">
-                                <CustomButton onClick={swalfunction}>Cotizar</CustomButton>
+                                <CustomButton onClick={this.swalfunction}>Cotizar</CustomButton>
                                 <Link to="/demo" className="text-white"><CustomButton>Demo</CustomButton></Link>
                             </div>
                         </div>
@@ -68,8 +88,14 @@ const Header = () => {
                 </div>
             </div>
         </header>
-    )
+        )
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        createQuotation: (quotation) => dispatch(createQuotation(quotation))
+    }
 }
 
-
-export default Header;
+export default connect(null, mapDispatchToProps)(Header);

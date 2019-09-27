@@ -5,7 +5,7 @@ export const createSubscriber = (email) => {
         firestore.collection('subscriptions').add({
             ...email,
             title: 'subscriber',
-            id: 1234,
+            id: 'none',
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_SUBSCRIBER', email });
